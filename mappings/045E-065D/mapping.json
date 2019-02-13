@@ -3,15 +3,15 @@
     "id" : "045E-065D",
     "hands" : {
         "left" : {
-            "asset" : "some-url",
-            "root" : "left-controller-node",
+            "asset" : "left.glb",
+            "root" : "Node",
             "components" : [ 0, 1, 2, 3, 4],
             "primaryButtonComponent" : 0,
             "primaryAxesComponent" : 1
         },
         "right" : {
-            "asset" : "some-url",
-            "root" : "right-controller-node",
+            "asset" : "right.glb",
+            "root" : "Node",
             "components" : [ 0, 1, 2, 3, 4],
             "primaryButtonComponent" : 0,
             "primaryAxesComponent" : 1
@@ -21,7 +21,7 @@
         {
             "dataSource" : 0,
             "root" : "trigger-node",
-            "labelTransform" : "trigger-label",
+            "labelTransform" : "MISSING",
             "visualResponses": [0]
         },
         {
@@ -85,8 +85,8 @@
         {
             "userAction": "onTouch",
             "target" : "trigger-transform-node",
-            "buttonMin": "trigger-min-transform-node",
-            "buttonMax": "trigger-max-transform-node"
+            "buttonMin": "UNPRESSED.004",
+            "buttonMax": "PRESSED.004"
         },
         {
             "userAction": "onTouch",
@@ -95,22 +95,24 @@
             "right" : "thumbstick-right-transform-right-node",
             "top" : "thumbstick-transform-top-node",
             "bottom" : "thumbstick-transform-bottom-node",
-            "buttonMin": "thumbstick-transform-min-node",
-            "buttonMax": "thumbstick-transform-max-node"
+            "buttonMin": "UNPRESSED.003",
+            "buttonMax": "PRESSED.003"
         },
         {
             "userAction": "onPress",
             "target" : "grip-transform-node",
-            "buttonMin": "grip-min-transform-node",
-            "buttonMax": "grip-max-transform-node"
+            "buttonMin": "UNPRESSED.002",
+            "buttonMax": "PRESSED.002"
         },
         {
             "userAction": "onPress",
-            "target" : "touchpad-transform-node",
+            "target" : "VALUE.007",
             "left" : "touchpad-transform-left-node",
             "right" : "touchpad-transform-right-node",
             "top" : "touchpad-transform-top-node",
-            "bottom" : "touchpad-transform-bottom-node"
+            "bottom" : "touchpad-transform-bottom-node",
+            "buttonMin" : "UNPRESSED.005",
+            "buttonMax": "PRESSED.005"
         },
         {
             "userAction": "onTouch",
@@ -122,9 +124,9 @@
         },
         {
             "userAction": "onPress",
-            "target" : "menu-transform-node",
-            "buttonMin": "menu-min-transform-node",
-            "buttonMax": "menu-max-transform-node"
+            "target" : "VALUE.001",
+            "buttonMin": "UNPRESSED.001",
+            "buttonMax": "PRESSED.001"
         }
     ]
 }
