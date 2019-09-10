@@ -231,7 +231,7 @@ const ModelViewer = {
 
   loadModel: async (motionController) => {
     try {
-      const gltfAsset = await new Promise(((resolve, reject) => {
+      const asset = await new Promise(((resolve, reject) => {
         three.loader.load(
           motionController.assetUrl,
           (loadedAsset) => { resolve(loadedAsset); },
@@ -245,7 +245,7 @@ const ModelViewer = {
 
       const model = {
         motionController,
-        rootNode: gltfAsset.scene
+        rootNode: asset.scene
       };
 
       model.nodes = findNodes(model);

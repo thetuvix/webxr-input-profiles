@@ -14,6 +14,7 @@ export default [
     external: [
       './three/build/three.module.js',
       './three/examples/jsm/loaders/GLTFLoader.js',
+      './three/examples/jsm/loaders/FBXLoader.js',
       './three/examples/jsm/controls/OrbitControls.js',
       './ajv/ajv.min.js',
       './motion-controllers.module.js',

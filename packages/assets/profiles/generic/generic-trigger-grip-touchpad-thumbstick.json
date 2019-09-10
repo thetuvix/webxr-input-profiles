@@ -10,39 +10,39 @@
             "rootNodeName" : "left-controller-node"
         },
         "right" : {
-            "path" : "some-url",
-            "rootNodeName" : "right-controller-node"
+            "path" : "generic-trigger-grip-touchpad-thumbstick/right.glb",
+            "rootNodeName" : "xrstandard_touchpad_thumbstick_R"
         }
     },
     "layouts": {
         "left-right-none": {
             "components" : {
                 "xr-standard-trigger": {
-                    "rootNodeName" : "trigger-node",
+                    "rootNodeName" : "TRIGGER",
                     "labelAnchorNodeName" : "trigger-label-transform",
                     "visualResponses" : [
                         {
-                            "rootNodeName" : "SELECT",
+                            "rootNodeName" : "TRIGGER",
                             "source" : "button",
                             "states" : ["default", "touched", "pressed"]
                         }
                     ]
                 },
                 "xr-standard-grip": {
-                    "rootNodeName" : "grip-node",
+                    "rootNodeName" : "GRIP",
                     "labelAnchorNodeName" : "grip-label-transform",
                     "visualResponses" : [
                         {
-                            "rootNodeName" : "SELECT",
-                            "source" : "button",
+                            "rootNodeName" : "GRIP",
+                            "source" : "state",
                             "states" : ["pressed"]
                         }
                     ]
                 },
                 "xr-standard-touchpad": {
-                    "rootNodeName" : "touchpad-node",
+                    "rootNodeName" : "TOUCHPAD_PRESS",
                     "labelAnchorNodeName" : "touchpad-label-transform",
-                    "touchPointNodeName" : "touchpad-dot",
+                    "touchPointNodeName" : "TOUCH",
                     "visualResponses" : [
                         {
                             "rootNodeName": "TOUCHPAD_PRESS",
