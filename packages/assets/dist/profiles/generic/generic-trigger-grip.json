@@ -1,0 +1,134 @@
+{
+  "profileId": "generic-trigger-grip",
+  "layouts": {
+    "left": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "trigger-node",
+          "labelAnchorNodeName": "trigger-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-grip": {
+          "type": "grip",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "grip-node",
+          "labelAnchorNodeName": "grip-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "left-controller-node"
+    },
+    "right": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "trigger-node",
+          "labelAnchorNodeName": "trigger-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-grip": {
+          "type": "grip",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "grip-node",
+          "labelAnchorNodeName": "grip-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "right-controller-node"
+    },
+    "none": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "trigger-node",
+          "labelAnchorNodeName": "trigger-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-grip": {
+          "type": "grip",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "grip-node",
+          "labelAnchorNodeName": "grip-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "none-controller-node"
+    }
+  }
+}

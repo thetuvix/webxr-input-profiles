@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>WebXR Input Profile Viewer</title>
+        <script type="module" src="./index.js"></script>
+        <link rel="stylesheet" type="text/css" href="./profileViewer.css" />
+    </head>
+    <body>
+        <main>
+            <div class="leftSide">
+                <h1>WebXR Input Profile Viewer</h1>
+                <section id="selectors">
+                    <div id="profileSourceType">
+                        <label>Select profiles source</label>
+                        <br>
+                        <label for="repositoryRadioButton">Repository</label>
+                        <input id="repositoryRadioButton" value="repository" checked="true" type="radio" name="sourceSelector">
+                        <label for="localProfileRadioButton">Local Profile</label>
+                        <input id="localProfileRadioButton" value="localProfile" type="radio" name="sourceSelector">
+                    </div>
+                    <div id="repository" hidden=true disabled=true>
+                        <label for="repositoryProfileIdSelector">Select profile</label>
+                        <select id="repositoryProfileIdSelector"></select>
+                    </div>
+                    <div id="localProfile" hidden="true" disabled=true>
+                        <label for="localProfileRegistryJsonSelector">Select repository JSON file</label>
+                        <input id="localProfileRegistryJsonSelector" type="file">
+                        <br>
+                        <label for="localProfileAssetJsonSelector">Select asset JSON file</label>
+                        <input id="localProfileAssetJsonSelector" type="file">
+                        <br>
+                        <label for="localProfileAssetsSelector">Select 3D asset files</label>
+                        <input id="localProfileAssetsSelector" type="file" multiple>
+                        <br>
+                    </div>
+                </section>
+                <section id="errors" hidden="true">
+                </section>
+                <section id="controls">
+                    <ul id="controlsList">
+                    </ul>
+                </section>
+            </div>
+            <section id="modelViewer">
+                <details class="data">
+                    <summary>Data</summary>
+                    <pre id="data"></pre>
+                </details>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "generic-button": "profiles/generic/generic-button.json",
+  "generic-touchpad": "profiles/generic/generic-touchpad.json",
+  "generic-trigger-grip-thumbstick": "profiles/generic/generic-trigger-grip-thumbstick.json",
+  "generic-trigger-grip-touchpad-thumbstick": "profiles/generic/generic-trigger-grip-touchpad-thumbstick.json",
+  "generic-trigger-grip-touchpad": "profiles/generic/generic-trigger-grip-touchpad.json",
+  "generic-trigger-grip": "profiles/generic/generic-trigger-grip.json",
+  "generic-trigger-thumbstick": "profiles/generic/generic-trigger-thumbstick.json",
+  "generic-trigger-touchpad-thumbstick": "profiles/generic/generic-trigger-touchpad-thumbstick.json",
+  "generic-trigger-touchpad": "profiles/generic/generic-trigger-touchpad.json",
+  "generic-trigger": "profiles/generic/generic-trigger.json",
+  "google-daydream": "profiles/google/google-daydream.json",
+  "htc-vive": "profiles/htc/htc-vive.json",
+  "magicleap-one": "profiles/magicleap/magicleap-one.json",
+  "microsoft-045e-065b": "profiles/microsoft/microsoft-045e-065b.json",
+  "microsoft-045e-065d": "profiles/microsoft/microsoft-045e-065d.json",
+  "oculus-go": "profiles/oculus/oculus-go.json",
+  "oculus-quest": "profiles/oculus/oculus-quest.json",
+  "oculus-touch-s": "profiles/oculus/oculus-touch-s.json",
+  "oculus-touch": "profiles/oculus/oculus-touch.json",
+  "samsung-gearvr": "profiles/samsung/samsung-gearvr.json",
+  "valve-knuckles": "profiles/valve/valve-knuckles.json"
+}

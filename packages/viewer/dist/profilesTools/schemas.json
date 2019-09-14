@@ -1,0 +1,317 @@
+{
+  "mainSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://immersive-web/webxr-input-profiles/assets/0.1.0/profile.schema.json",
+    "type": "object",
+    "description": "The root object for a gamepad profile.",
+    "additionalProperties": false,
+    "required": [
+      "profileId",
+      "assets",
+      "layouts"
+    ],
+    "properties": {
+      "profileId": {
+        "$ref": "common.schema.json#/definitions/profileId"
+      },
+      "assets": {
+        "allOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "none": {
+                "$ref": "asset.schema.json"
+              },
+              "left": {
+                "$ref": "asset.schema.json"
+              },
+              "right": {
+                "$ref": "asset.schema.json"
+              },
+              "left-right": {
+                "$ref": "asset.schema.json"
+              },
+              "left-right-none": {
+                "$ref": "asset.schema.json"
+              }
+            }
+          },
+          {
+            "$ref": "common.schema.json#/definitions/handedness"
+          }
+        ]
+      },
+      "layouts": {
+        "allOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "none": {
+                "$ref": "layout.schema.json"
+              },
+              "left": {
+                "$ref": "layout.schema.json"
+              },
+              "right": {
+                "$ref": "layout.schema.json"
+              },
+              "left-right": {
+                "$ref": "layout.schema.json"
+              },
+              "left-right-none": {
+                "$ref": "layout.schema.json"
+              }
+            }
+          },
+          {
+            "$ref": "common.schema.json#/definitions/handedness"
+          }
+        ]
+      }
+    }
+  },
+  "dependencies": [
+    {
+      "$schema": "http://json-schema.org/draft-07/schema",
+      "$id": "https://immersive-web/webxr-input-profiles/assets/0.1.0/asset.schema.json",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "rootNodeName"
+      ],
+      "properties": {
+        "path": {
+          "description": "The URI of the asset associated with the hand",
+          "type": "string"
+        },
+        "rootNodeName": {
+          "description": "The root node of the hand within the associated asset",
+          "type": "string"
+        }
+      }
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema",
+      "$id": "https://immersive-web/webxr-input-profiles/assets/0.1.0/component.schema.json",
+      "type": "object",
+      "description": "Component description",
+      "additionalProperties": false,
+      "properties": {
+        "rootNodeName": {
+          "description": "TODO",
+          "type": "string"
+        },
+        "labelAnchorNodeName": {
+          "description": "TODO",
+          "type": "string"
+        },
+        "touchPointNodeName": {
+          "type": "string"
+        },
+        "analogButtonValues": {
+          "type": "boolean"
+        },
+        "visualResponses": {
+          "$ref": "visualResponses.schema.json"
+        }
+      },
+      "required": [
+        "rootNodeName",
+        "labelAnchorNodeName",
+        "visualResponses"
+      ]
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema",
+      "$id": "https://immersive-web/webxr-input-profiles/assets/0.1.0/layout.schema.json",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "components"
+      ],
+      "properties": {
+        "components": {
+          "$ref": "common.schema.json#/definitions/components"
+        }
+      }
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema",
+      "$id": "https://immersive-web/webxr-input-profiles/assets/0.1.0/visualResponses.schema.json",
+      "type": "array",
+      "description": "The responses array",
+      "minItems": 1,
+      "additionalItems": false,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "rootNodeName",
+          "source",
+          "states"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rootNodeName": {
+            "description": "The node in the asset containing the nodes of this visualization",
+            "type": "string"
+          },
+          "source": {
+            "description": "The property name driving this visualization",
+            "type": "string",
+            "enum": [
+              "xAxis",
+              "yAxis",
+              "button",
+              "state"
+            ]
+          },
+          "states": {
+            "description": "The states the visualization applies to",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          },
+          "targetNodeName": {
+            "description": "The node in the asset to be modified by this visualization",
+            "type": "string"
+          },
+          "maxNodeName": {
+            "description": "Node in the asset representing the effect of the maximum associated value",
+            "type": "string"
+          },
+          "minNodeName": {
+            "description": "Node in the asset representing the effect of the minimum associated value",
+            "type": "string"
+          },
+          "property": {
+            "type": "string",
+            "enum": [
+              "transform",
+              "visibility"
+            ]
+          }
+        },
+        "if": {
+          "properties": {
+            "source": {
+              "enum": [
+                "state"
+              ]
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "property": {
+              "type": "string",
+              "enum": [
+                "transform",
+                "visibility"
+              ]
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "property": {
+              "type": "string",
+              "enum": [
+                "transform"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema",
+      "$id": "https://immersive-web/webxr-input-profiles/assets/0.1.0/common.schema.json",
+      "definitions": {
+        "profileId": {
+          "description": "A properly formatted string uniquely identifying a profile",
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)+$"
+        },
+        "handedness": {
+          "type": "object",
+          "minProperties": 1,
+          "dependencies": {
+            "left-right-none": {
+              "not": {
+                "required": [
+                  "none",
+                  "left",
+                  "right",
+                  "left-right"
+                ]
+              }
+            },
+            "left-right": {
+              "not": {
+                "required": [
+                  "left",
+                  "right",
+                  "left-right-none"
+                ]
+              }
+            },
+            "left": {
+              "required": [
+                "right"
+              ],
+              "not": {
+                "required": [
+                  "left-right",
+                  "left-right-none"
+                ]
+              }
+            },
+            "right": {
+              "required": [
+                "left"
+              ],
+              "not": {
+                "required": [
+                  "left-right",
+                  "left-right-none"
+                ]
+              }
+            },
+            "none": {
+              "not": {
+                "required": [
+                  "left-right-none"
+                ]
+              }
+            }
+          }
+        },
+        "componentId": {
+          "description": "A well-formatted component id",
+          "type": "string",
+          "pattern": "^[^\\s]+.+[^\\s]$"
+        },
+        "components": {
+          "description": "The collection of components in the layout",
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": false,
+          "patternProperties": {
+            "^[^\\s]+.+[^\\s]$": {
+              "$ref": "component.schema.json"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

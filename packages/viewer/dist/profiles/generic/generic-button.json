@@ -1,0 +1,83 @@
+{
+  "profileId": "generic-button",
+  "layouts": {
+    "left": {
+      "mapping": "",
+      "components": {
+        "faceButton": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "button-node",
+          "labelAnchorNodeName": "button-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "left-controller-node"
+    },
+    "right": {
+      "mapping": "",
+      "components": {
+        "faceButton": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "button-node",
+          "labelAnchorNodeName": "button-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "right-controller-node"
+    },
+    "none": {
+      "mapping": "",
+      "components": {
+        "faceButton": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "button-node",
+          "labelAnchorNodeName": "button-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "source": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "none-controller-node"
+    }
+  }
+}

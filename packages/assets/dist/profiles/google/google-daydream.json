@@ -1,0 +1,167 @@
+{
+  "profileId": "google-daydream",
+  "layouts": {
+    "left": {
+      "mapping": "",
+      "components": {
+        "touchpad": {
+          "type": "touchpad",
+          "gamepadIndices": {
+            "button": 1,
+            "xAxis": 0,
+            "yAxis": 1
+          },
+          "rootNodeName": "touchpad-node",
+          "labelAnchorNodeName": "touchpad-label-transform",
+          "touchPointNodeName": "touchpad-dot",
+          "visualResponses": [
+            {
+              "rootNodeName": "TOUCHPAD_PRESS",
+              "source": "state",
+              "states": [
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCH",
+              "source": "state",
+              "states": [
+                "touched",
+                "pressed"
+              ],
+              "property": "visibility"
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_X",
+              "source": "xAxis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_Y",
+              "source": "yAxis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "left-controller-node"
+    },
+    "right": {
+      "mapping": "",
+      "components": {
+        "touchpad": {
+          "type": "touchpad",
+          "gamepadIndices": {
+            "button": 1,
+            "xAxis": 0,
+            "yAxis": 1
+          },
+          "rootNodeName": "touchpad-node",
+          "labelAnchorNodeName": "touchpad-label-transform",
+          "touchPointNodeName": "touchpad-dot",
+          "visualResponses": [
+            {
+              "rootNodeName": "TOUCHPAD_PRESS",
+              "source": "state",
+              "states": [
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCH",
+              "source": "state",
+              "states": [
+                "touched",
+                "pressed"
+              ],
+              "property": "visibility"
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_X",
+              "source": "xAxis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_Y",
+              "source": "yAxis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "right-controller-node"
+    },
+    "none": {
+      "mapping": "",
+      "components": {
+        "touchpad": {
+          "type": "touchpad",
+          "gamepadIndices": {
+            "button": 1,
+            "xAxis": 0,
+            "yAxis": 1
+          },
+          "rootNodeName": "touchpad-node",
+          "labelAnchorNodeName": "touchpad-label-transform",
+          "touchPointNodeName": "touchpad-dot",
+          "visualResponses": [
+            {
+              "rootNodeName": "TOUCHPAD_PRESS",
+              "source": "state",
+              "states": [
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCH",
+              "source": "state",
+              "states": [
+                "touched",
+                "pressed"
+              ],
+              "property": "visibility"
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_X",
+              "source": "xAxis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_Y",
+              "source": "yAxis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "none-controller-node"
+    }
+  }
+}
