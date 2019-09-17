@@ -1,5 +1,5 @@
 {
-    "profileId": "microsoft-045e-065b",
+    "profileId": "microsoft-mixed-reality",
     "fallbackProfileIds": [ "generic-trigger-grip-touchpad-thumbstick"],
     "layouts" : {
         "left-right" : {
